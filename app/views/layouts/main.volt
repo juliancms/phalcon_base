@@ -9,7 +9,7 @@
             </button>
             <a class="navbar-brand" href="#">SITE</a>
         </div>
-        {{ elements.getMenu() }}
+        
     </div>
 </nav>
 <div class="container">

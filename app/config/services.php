@@ -100,3 +100,10 @@ $di->set('flash', function(){
 		'notice'  => 'alert alert-info',
 	));
 });
+
+	/**
+	 * Registro del componente elements, ubicado en library, para generación de menús y elementos UI
+	 */
+	$di->set('elements', function(){
+		return new Elements();
+	});
