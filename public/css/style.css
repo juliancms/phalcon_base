@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+footer { text-align: center; color: #666; }
+footer p { padding-top: 5px; }
+.clear {
+	clear: both;
+}
