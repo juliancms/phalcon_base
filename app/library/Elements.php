@@ -11,17 +11,13 @@ class Elements extends Component
 {
 
     private $_headerMenu = array(
-            'nombre_controlador' => array(
-                'caption' => 'Nombre',
-                'action' => 'nombreaccion'
+            'index' => array(
+                'caption' => 'Inicio',
+                'action' => 'index'
             ),
-            'nombre_controlador2' => array(
-                'caption' => 'Nombre 2',
-                'action' => 'nombreaccion2'
-            ),
-    		'nombre_controlador3' => array(
-                'caption' => 'Nombre 3',
-                'action' => 'nombreaccion3'
+            'reserva' => array(
+                'caption' => 'Reservas',
+                'action' => 'index'
             )
     );    
 
@@ -32,6 +28,8 @@ class Elements extends Component
      */
     public function getMenu()
     {
+    	$controllerName = $this->view->getControllerName();
+    	$actionName = $this->view->getActionName();
     	echo '<div class="nav-collapse">';
     	echo '<ul class="nav navbar-nav navbar-left">';
     	foreach ($this->_headerMenu as $controller => $option) {

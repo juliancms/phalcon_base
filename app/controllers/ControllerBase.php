@@ -3,11 +3,11 @@ use Phalcon\Mvc\Controller;
 class ControllerBase extends Controller
 {
 	/**
-	 * Definición del título y el archivo de plantilla base
+	 * Definiciï¿½n del tï¿½tulo y el archivo de plantilla base
 	 */
     protected function initialize()
     {
-        $this->tag->prependTitle('SICO | ');
+        $this->tag->prependTitle('Sistema de Reservas | ');
         $this->view->setTemplateAfter('main');
     }
     protected function forward($uri)

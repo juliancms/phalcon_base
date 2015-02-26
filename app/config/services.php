@@ -89,6 +89,15 @@ $di->set('modelsMetadata', function() {
 	return new MetaData();
 });
 
+/**
+ * Inicia la sesiÃ³n con la primera vez que un componente solicita el servicio de sesiÃ³n (session)
+ */
+$di->set('session', function() {
+	$session = new SessionAdapter();
+	$session->start();
+	return $session;
+});
+
 
 /**
  * Registro del servicio de alertas (flash) con clasess CSS personalizadas
@@ -102,7 +111,7 @@ $di->set('flash', function(){
 });
 
 	/**
-	 * Registro del componente elements, ubicado en library, para generación de menús y elementos UI
+	 * Registro del componente elements, ubicado en library, para generaciï¿½n de menï¿½s y elementos UI
 	 */
 	$di->set('elements', function(){
 		return new Elements();
