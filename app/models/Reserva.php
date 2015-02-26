@@ -2,7 +2,6 @@
 use Phalcon\Mvc\Model\Behavior\Timestampable;
 class Reserva extends \Phalcon\Mvc\Model
 {
-
     /**
      *
      * @var integer
