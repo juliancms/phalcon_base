@@ -4,3 +4,10 @@ footer p { padding-top: 5px; }
 .clear {
 	clear: both;
 }
+.centrar {
+	text-align: center;
+}
+.centrar a {
+	color: red;
+	font-size: 20px;
+}

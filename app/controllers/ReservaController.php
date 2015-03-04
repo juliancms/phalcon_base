@@ -12,7 +12,6 @@ class ReservaController extends ControllerBase
 
     public function indexAction()
     {
-    	$this->persistent->parameters = null;
     	$reservas = Reserva::find();
     	if (count($reservas) == 0) {
     		$this->flash->notice("No se ha agregado ninguna reserva hasta el momento");
@@ -30,7 +29,7 @@ class ReservaController extends ControllerBase
     	if (!$this->request->isPost()) {
     		return $this->response->redirect("reserva/");
     	}
-    	$reserva = new Reserva();;
+    	$reserva = new Reserva();
     	$reserva->nombreElemento = $this->request->getPost("nombreElemento");
     	$reserva->observacion = $this->request->getPost("observacion");
     	if (!$reserva->save()) {
@@ -40,6 +39,23 @@ class ReservaController extends ControllerBase
     		return $this->response->redirect("reserva/nuevo");
     	}
     	$this->flash->success("La reserva fue guardada exitosamente");
+    	return $this->response->redirect("reserva/");
+    }
+    
+    public function eliminarAction($id_que_traje_de_la_vista)
+    {
+    	$reserva = Reserva::findFirstByIdReserva($id_que_traje_de_la_vista);
+    	if (!$reserva) {
+    		$this->flash->error("No se encontró la reserva, problamente ya la eliminaron");
+    		return $this->response->redirect("reserva/");
+    	}
+    	if (!$reserva->delete()) {
+            foreach ($products->getMessages() as $message) {
+                $this->flash->error($message);
+            }
+            return $this->response->redirect("reserva/");
+        }
+    	$this->flash->success("La reserva fue eliminada exitosamente");
     	return $this->response->redirect("reserva/");
     }
 }

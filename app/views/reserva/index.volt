@@ -9,6 +9,7 @@
             <th>Nombre Elemento</th>
             <th>Observación</th>
             <th>Fecha y hora</th>
+            <th>Eliminar</th>
          </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
 	        <td>{{ reserva.nombreElemento }}</td>
 	        <td>{{ reserva.observacion }}</td>
 	        <td>{{ reserva.fechahora }}</td>
+	        <td class='centrar'><a href='eliminar/{{ reserva.id_reserva }}'><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
         </tr>
     {% endfor %}
     </tbody>
