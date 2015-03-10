@@ -116,3 +116,10 @@ $di->set('flash', function(){
 	$di->set('elements', function(){
 		return new Elements();
 	});
+	
+/**
+ * Registro del componente elements, ubicado en library, para generaci�n de men�s y elementos UI
+ */
+$di->set('conversiones', function(){
+	return new Conversiones();
+});
