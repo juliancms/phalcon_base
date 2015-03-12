@@ -31,6 +31,7 @@ class ReservaController extends ControllerBase
     	}
     	$reserva = new Reserva();
     	$reserva->nombreElemento = $this->request->getPost("nombreElemento");
+    	$reserva->nombreCompleto = $this->request->getPost("nombreCompleto");
     	$reserva->observacion = $this->request->getPost("observacion");
     	if (!$reserva->save()) {
     		foreach ($reserva->getMessages() as $message) {

@@ -9,6 +9,12 @@ class Reserva extends \Phalcon\Mvc\Model
      * @var integer
      */
     public $id_reserva;
+    
+    /**
+     *
+     * @var string
+     */
+    public $nombreCompleto;
 
     /**
      *
@@ -46,7 +52,11 @@ class Reserva extends \Phalcon\Mvc\Model
     public function getFechaDetail()
     {
     	$conversiones = $this->getDI()->getConversiones();
+    	// La función substr me recorta la variable o campo ingresado, en este caso obtiene los primeros 10 dígitos
+    	if(substr($this->fechahora, 0, 10) == date("Y-m-d")){
+    		return "Hoy";
+    	}
     	return $conversiones->fecha(4, $this->fechahora);
-    	echo "asdjfsdaljkflkjsadflkj";
+    	
     }
 }

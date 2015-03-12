@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-02-2015 a las 13:56:40
+-- Tiempo de generación: 12-03-2015 a las 09:32:09
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.5.19
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `reserva` (
 `id_reserva` bigint(20) NOT NULL,
+  `nombreCompleto` varchar(100) NOT NULL,
   `nombreElemento` varchar(50) NOT NULL,
   `observacion` longtext NOT NULL,
   `fechahora` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP

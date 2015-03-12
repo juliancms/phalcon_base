@@ -4,6 +4,12 @@
 
 {{ form("reserva/guardar/", "method":"post", "class":"form-container form-horizontal", "parsley-validate" : "") }}
     <div class="form-group">
+        <label class="col-sm-2 control-label" for="nombreCompleto">Nombre completo quién reserva</label>
+        <div class="col-sm-10">
+               {{ text_field("nombreCompleto", "class" : "form-control required") }}
+        </div>
+    </div>
+    <div class="form-group">
         <label class="col-sm-2 control-label" for="nombreElemento">Nombre elemento</label>
         <div class="col-sm-10">
                {{ text_field("nombreElemento", "class" : "form-control required") }}
