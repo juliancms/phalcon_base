@@ -10,6 +10,12 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="col-sm-2 control-label" for="email">E-mail</label>
+        <div class="col-sm-10">
+        	<input type="email" name="email" class="form-control" data-parsley-trigger="change" required />
+        </div>
+    </div>
+    <div class="form-group">
         <label class="col-sm-2 control-label" for="nombreElemento">Nombre elemento</label>
         <div class="col-sm-10">
                {{ text_field("nombreElemento", "class" : "form-control required") }}
