@@ -2,7 +2,7 @@
 
 <h1>Nueva Reserva</h1>
 
-{{ form("reserva/guardar/", "method":"post", "class":"form-container form-horizontal", "parsley-validate" : "") }}
+{{ form("reserva/guardar/", "method":"post", "class":"form-container form-horizontal", "data-parsley-validate" : "") }}
     <div class="form-group">
         <label class="col-sm-2 control-label" for="nombreCompleto">Nombre completo quién reserva</label>
         <div class="col-sm-10">

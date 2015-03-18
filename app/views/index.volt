@@ -15,6 +15,7 @@
         {{ javascript_include('js/jquery/jquery.min.js') }}
         {{ javascript_include('js/bootstrap.min.js') }}
         {{ javascript_include('js/utils.js') }}
+        {{ javascript_include('js/parsley.min.js') }}
         {{ assets.outputJs() }}
     </body>
 </html>
